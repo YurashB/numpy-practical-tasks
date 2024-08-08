@@ -98,5 +98,6 @@ def print_array(arr, message=None):
 print_array(array, "Initial array:\n")
 
 # Saving
+# todo
 save(array, "txt")
 
