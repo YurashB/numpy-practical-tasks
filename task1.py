@@ -1,12 +1,3 @@
-# 4. Manipulation Workflow:
-# o Create the initial arrays.
-# o Perform each basic operation sequentially. Using the print_array function to output the
-# arrays and output results to the console, when needed.
-# 5. Execution and Verification: Test the script to ensure that code executes as expected and
-# that the console outputs correctly display the changes to the array.
-# Deliverables: A Python script (.py file) containing all the functions along with the code to create the
-# initial arrays and execute all manipulations.
-
 import numpy as np
 
 one_dim_array = np.arange(0, 11, dtype=int)  # create 1-D array

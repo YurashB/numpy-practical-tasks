@@ -87,17 +87,34 @@ def wise_std(arr, axis=1):
         return np.std(arr, axis)
 
 
-def print_array(arr, message=None):
-    if message is not None:
-        print(message + str(arr))
-    else:
-        print(arr)
-    print()
+def print_array(message, arr):
+    print(message + "\n" + str(arr) + "\n")
 
 
-print_array(array, "Initial array:\n")
+print_array("Initial array: ", array)
 
-# Saving
-# todo
-save(array, "txt")
+# Data I/O Functions:
+txt = save(array, fm="txt")
+csv = save(array, fm="csv")
+npy = save(array, fm="npy")
+npz = save(array, fm="npz")
 
+print_array("Saving and loading in txt", load(txt + ".txt"))
+print_array("Saving and loading in csv", load(csv + ".csv"))
+print_array("Saving and loading in npz", load(npz + ".npz"))
+print_array("Saving and loading in npy", load(npy + ".npy"))
+
+# Aggregate Functions:
+
+print_array("Sum function: ", sum(array))
+print_array("Mean function: ", mean(array))
+print_array("Median function: ", median(array))
+print_array("Standard deviation function: ", standard_deviation(array))
+print_array("Row wise sum function: ", wise_sum(array, 1))
+print_array("Col wise sum function: ", wise_sum(array, 0))
+print_array("Row wise mean function: ", wise_mean(array, 1))
+print_array("Col wise mean function: ", wise_mean(array, 0))
+print_array("Row wise median function: ", wise_median(array, 1))
+print_array("Col wise median function: ", wise_median(array, 0))
+print_array("Row wise std function: ", wise_std(array, 1))
+print_array("Col wise std function: ", wise_std(array, 0))

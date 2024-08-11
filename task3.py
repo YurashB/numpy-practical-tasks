@@ -19,12 +19,8 @@ def combine(*args):
     return np.concatenate(args)
 
 
-def print_array(arr, message=None):
-    if message is not None:
-        print(message + str(arr))
-    else:
-        print(arr)
-    print()
+def print_array(message, arr):
+    print(message + "\n" + str(arr) + "\n")
 
 
 print_array(array, "Initial array:\n")
